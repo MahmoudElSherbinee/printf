@@ -24,7 +24,6 @@ int (*print_function(const char *s, int index))(va_list, char *, unsigned int)
 		{"l", handle_percent}, {"h", handle_percent},
 		{"+i", handle_symbols}, {" +i", handle_symbols}, {"+ i", handle_symbols},
 		{"+d", handle_symbols}, {" +d", handle_symbols}, {"+ d", handle_symbols},
-		{"p", handle_pointer},
 		{NULL, NULL},
 	};
 	int i = 0, j = 0, first_index;
@@ -69,7 +68,7 @@ int calc_length(const char *s, int index)
 	type sp_func_check[] = {
 		{"c", handle_char}, {"s", handle_string}, {"b", handle_binary},
 		{"d", handle_int}, {"i", handle_int}, {"#i", handle_int}, {"#d", handle_int},
-		{"%", handle_percent}, {" %", handle_percent}, {"p", handle_pointer},
+		{"%", handle_percent}, {" %", handle_percent},
 		{"l", handle_percent}, {"h", handle_percent},
 		{"+i", handle_symbols}, {" +i", handle_symbols}, {"+ i", handle_symbols},
 		{"+d", handle_symbols}, {" +d", handle_symbols}, {"+ d", handle_symbols},
