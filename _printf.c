@@ -22,10 +22,10 @@ int _printf(const char *format, ...)
 	char *buffer;
 
 	va_start(arguments, format), buffer = malloc(sizeof(char) * 1024);
-	if (!format[i])
-		return (0);
 	if (!format || !buffer || (format[i] == '%' && !format[i + 1]))
 		return (-1);
+	if (!format[i])
+		return (0);
 	for (i = 0; format && format[i]; i++)
 	{
 		if (format[i] == '%')
@@ -36,16 +36,16 @@ int _printf(const char *format, ...)
 			}
 			else
 			{	function = print_function(format, i + 1);
-				if (function != NULL)
-				{
-					length += function(arguments, buffer, buffer_index);
-					i += calc_length(format, i + 1);
-				}
-				else
+				if (function == NULL)
 				{
 					if (format[i + 1] == ' ' && !format[i + 2])
 						return (-1);
 					handle_buffer(buffer, format[i], buffer_index), length++, i--;
+				}
+				else
+				{
+					length += function(arguments, buffer, buffer_index);
+					i += calc_length(format, i + 1);
 				}
 			} i++;
 		}
