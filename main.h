@@ -48,7 +48,7 @@ char *convert_bin(char *binary, long int int_in, int isneg, int limit);
 char *convert_hex(char *bnr, char *hex, int isupp, int limit);
 char *convert_bin_oct (char *binary, char *octal);
 int print_S(va_list arguments, char *buffer, unsigned int buffer_index);
-
+int print_address(va_list arguments, char *buffer, unsigned int buffer_index);
 
 
 
