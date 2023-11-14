@@ -40,6 +40,13 @@ int handle_binary(va_list arguments, char *buffer, unsigned int buffer_index);
 int handle_symbols(va_list arguments, char *buffer, unsigned int buffer_index);
 int print_reversed(va_list arguments, char *buffer, unsigned int buffer_index);
 int handle_ROT(va_list arguments, char *buffer, unsigned int buffer_index);
+int print_u(va_list arguments, char *buffer, unsigned int buffer_index);
+int print_o(va_list arguments, char *buffer, unsigned int buffer_index);
+int print_x(va_list arguments, char *buffer, unsigned int buffer_index);
+int print_X(va_list arguments, char *buffer, unsigned int buffer_index);
+char *convert_bin(char *binary, long int int_in, int isneg, int limit);
+char *convert_hex(char *bnr, char *hex, int isupp, int limit);
+char *convert_bin_oct (char *binary, char *octal);
 
 
 

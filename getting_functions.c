@@ -25,6 +25,10 @@ int (*print_function(const char *s, int index))(va_list, char *, unsigned int)
 		{"+i", handle_symbols}, {" +i", handle_symbols}, {"+ i", handle_symbols},
 		{"+d", handle_symbols}, {" +d", handle_symbols}, {"+ d", handle_symbols},
 		{"r", print_reversed}, {"R", handle_ROT},
+		{"u", print_u}, {" u", print_u}, {"#u", print_u}, {"+u", print_u},
+		{"o", print_o}, {"+o", print_o}, {" o", print_o},
+		{"x", print_x}, {"+x", print_x}, {" x", print_x},
+		{"X", print_X}, {"+X", print_X}, {" X", print_X},
 		{NULL, NULL},
 	};
 	int i = 0, j = 0, first_index;
@@ -74,6 +78,10 @@ int calc_length(const char *s, int index)
 		{"+i", handle_symbols}, {" +i", handle_symbols}, {"+ i", handle_symbols},
 		{"+d", handle_symbols}, {" +d", handle_symbols}, {"+ d", handle_symbols},
 		{"r", print_reversed}, {"R", handle_ROT},
+		{"u", print_u}, {" u", print_u}, {"#u", print_u}, {"+u", print_u},
+		{"o", print_o}, {"+o", print_o}, {" o", print_o},
+		{"x", print_x}, {"+x", print_x}, {" x", print_x},
+		{"X", print_X}, {"+X", print_X}, {" X", print_X},
 		{NULL, NULL},
 	};
 	int i = 0, j = 0, first_index;
