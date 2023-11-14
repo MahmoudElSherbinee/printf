@@ -38,7 +38,8 @@ int handle_percent(va_list arguments, char *buffer, unsigned int buffer_index);
 int convert_to_binary(unsigned int value, char *binary_buffer);
 int handle_binary(va_list arguments, char *buffer, unsigned int buffer_index);
 int handle_symbols(va_list arguments, char *buffer, unsigned int buffer_index);
-
+int print_reversed(va_list arguments, char *buffer, unsigned int buffer_index);
+int handle_ROT(va_list arguments, char *buffer, unsigned int buffer_index);
 
 
 

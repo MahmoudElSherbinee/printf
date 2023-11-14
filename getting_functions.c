@@ -24,6 +24,7 @@ int (*print_function(const char *s, int index))(va_list, char *, unsigned int)
 		{"l", handle_percent}, {"h", handle_percent},
 		{"+i", handle_symbols}, {" +i", handle_symbols}, {"+ i", handle_symbols},
 		{"+d", handle_symbols}, {" +d", handle_symbols}, {"+ d", handle_symbols},
+		{"r", print_reversed}, {"R", handle_ROT},
 		{NULL, NULL},
 	};
 	int i = 0, j = 0, first_index;
@@ -72,6 +73,7 @@ int calc_length(const char *s, int index)
 		{"l", handle_percent}, {"h", handle_percent},
 		{"+i", handle_symbols}, {" +i", handle_symbols}, {"+ i", handle_symbols},
 		{"+d", handle_symbols}, {" +d", handle_symbols}, {"+ d", handle_symbols},
+		{"r", print_reversed}, {"R", handle_ROT},
 		{NULL, NULL},
 	};
 	int i = 0, j = 0, first_index;
